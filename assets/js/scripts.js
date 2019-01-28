@@ -16,9 +16,6 @@ $(function() {
     
   });
 
-
-  console.log("hey");
-
     var menuTrigger = $('#toggle-main-menu-mobile');
     var menuContainer = $('#main-menu-mobile');
 
@@ -31,7 +28,7 @@ $(function() {
     });
     
     // $('#fullpage').fullpage({
-    //   anchors:['section1', 'section2', 'section3', 'section4', 'section5'],
+    //   anchors:['hp-section1', 'hp-section2', 'hp-section3'],
     //   scrollOverflow: true,
     //   css3:false
     //  // normalScrollElements: '.map'
