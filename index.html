@@ -1,0 +1,68 @@
+---
+title: Parachute - Soft landings for hard times
+layout: default
+bodyClass: page-home
+---
+
+<section id="hp-section-1" class="bg-dark text-white fp-noscroll layout-hero pt-3">
+  <img class="teardrop svg" src="{{site.baseurl}}/assets/images/top-strip-2.svg">
+  <div class="container">
+    <div class="row d-flex flex-column">
+      <div class="col-6 text-center">
+        <div class="logo-hero">
+          <img class="svg test" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo-white.svg" />
+        </div>
+      </div>
+      <div class='intro-text col-6'> 
+        <h2 class='h1'>We got you.</h2>
+        <p>Is your business in trouble? Parachutes is here to help.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id fermentum ipsum. Sed elementum efficitur ultricies. Ut vestibulum aliquet ligula, et elementum dolor gravida at.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="hp-section-2" class="py-5 fp-noscroll section-2 layout-services">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12">
+        <h2 class="our-purpose-title mb-2">Our sole purpose is to help our clients.</h2>
+      </div>
+      {% for service in site.services %}
+      <div class="col-12 col-md-4 mb-1">
+        <div class="service service-summary">
+          <div class="service-content">
+            <h2 class="service-title">
+              <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+            </h2>
+            {{ service.content | markdownify | strip_html | truncate: 100 }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-12 text-center">
+        <a class="btn btn-light mt-2" href="{{site.baseurl}}/services">View All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hp-section-3" class="py-5 section-3 fp-noscroll layout-features">
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-12">
+        <h2 class="text-uppercase h1 title text-center mb-4">Our Features</h2>
+      </div>
+      {% for feature in site.data.features %}
+      <div class="col-12 col-md-6 col-lg-4 mb-2">
+        <div class="feature">
+          {% if feature.image %}<div class="mb-1 feature-image"><img class="" alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %}
+          <h3 class="feature-title">{{ feature.title }}</h3>
+          <div class="feature-content">{{ feature.description }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
