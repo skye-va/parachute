@@ -1,15 +1,22 @@
 $(function() {
-  console.log( "ready!" );
+  // console.log( "ready!" );
 
   // Scrolling Sticky Header Functions
   $(window).scroll(function() {
 
     var scroll = $(window).scrollTop();
-    var divheight = $(".layout-intro").outerHeight();
+    var divheight = $(".layout-intro").outerHeight() - 50;
+    if($('body').hasClass('page-home')) {
+      divheight = $(".layout-hero").outerHeight() - 50;
+    }
+
+    //console.log(scroll + ", " + divheight);
 
     if (scroll >= divheight) {
+      //console.log('theme-dark');
       $("#header").removeClass('theme-light').addClass('theme-dark'); 
     } else { 
+      //console.log('no');
       $("#header").addClass('theme-light').removeClass('theme-dark'); 
     }
 

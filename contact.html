@@ -25,51 +25,39 @@ bodyClass: page-contact
         <li><strong>Address: </strong>{{ site.data.contact.address }}</li>
         {% endif %}
       </ul>
-      <h4 class="mt-4">Business Hours</h4>
-      <table class="table table-sm opening-hours-table">
-        <tr>
-          <td class="day font-weight-bold">Monday</td>
-          <td class="opens">8:30am</td>
-          <td>-</td>
-          <td class="closes">5:00pm</td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Tuesday</td>
-          <td class="opens">8:30am</td>
-          <td>-</td>
-          <td class="closes">5:00pm</td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Wednesday</td>
-          <td class="opens">8:30am</td>
-          <td>-</td>
-          <td class="closes">5:00pm</td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Thursday</td>
-          <td class="opens">8:30am</td>
-          <td>-</td>
-          <td class="closes">5:00pm</td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Friday</td>
-          <td class="opens">8:30am</td>
-          <td>-</td>
-          <td class="closes">5:00pm</td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Saturday</td>
-          <td class="opens">Closed</td>
-          <td></td>
-          <td class="closes"></td>
-        </tr>
-        <tr>
-          <td class="day font-weight-bold">Sunday</td>
-          <td class="opens">Closed</td>
-          <td> </td>
-          <td class="closes"></td>
-        </tr>
-      </table>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-12">
+      <hr>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h2>Send us an enquiry</h2>
+          <form id="contact-form" class="contact-form" method="post" data-success="Message successfully sent!">
+
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="email" class="form-control" id="contact-name" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email address</label>
+              <input type="email" class="form-control" id="contact-email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div> 
+            
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Your message" required ></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </div>

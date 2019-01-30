@@ -59,6 +59,7 @@ body:not(.page-home) {
 
 .header {
   background-color: transparent;
+  // background-color: $primary;
   transition: all 0.35s ease-out;
   .main-menu > ul > li > a {
     color: $white;
@@ -365,6 +366,7 @@ $button-width: 35px;
 
   &.intro-small {
     min-height: 200px;
+    height: auto;
   }
 
   h1 {
